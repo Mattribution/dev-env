@@ -1,0 +1,15 @@
+version: '3'
+services:
+  presto:
+    image: "starburstdata/presto:latest"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./catalog:/etc/catalog
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+        - 5432:5432
