@@ -21,9 +21,18 @@ Deletes the images
 
 docker exec -it <container-id> /bin/sh
 
-## Connect to Postgres
+## Setting up Postgres
+Postgres is what we chose to use as a dev DB to connect to presto. We will use this for dev and internal use.
 
+### Connect
 `psql -h 127.0.0.1 -U postgres`
+
+### Create DB
+`CREATE DATABASE mattribution;`
+`\c mattribution`
+
+### Create tables
+Look at tables.txt for the list of tables to be created
 
 ## Connect to Presto
 
