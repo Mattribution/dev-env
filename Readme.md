@@ -36,4 +36,4 @@ Look at tables.txt for the list of tables to be created
 
 ## Connect to Presto
 
-`presto --catalog mydb --schema public`
+`presto --catalog postgresdev --schema public`

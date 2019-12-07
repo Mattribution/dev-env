@@ -5,7 +5,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./catalog/postgres-dev.properties:/usr/lib/presto/etc/catalog/postgres-dev.properties
+      - ./catalog/postgresdev.properties:/usr/lib/presto/etc/catalog/postgresdev.properties
   postgres:
     image: postgres
     volumes:
