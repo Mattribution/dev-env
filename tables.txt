@@ -1,6 +1,7 @@
 CREATE TABLE tracks (
   id SERIAL PRIMARY KEY,
   owner_id integer,
+  anonymous_id varchar,
   user_id character varying,
   fp_hash character varying,
   page_url character varying,
@@ -24,6 +25,7 @@ CREATE TABLE kpis (
   column_name varchar NOT NULL,
   value varchar NOT NULL,
   name varchar NOT NULL,
+  target money,
   created_at timestamp
 );
 
