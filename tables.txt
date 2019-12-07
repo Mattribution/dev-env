@@ -25,7 +25,7 @@ CREATE TABLE kpis (
   column_name varchar NOT NULL,
   value varchar NOT NULL,
   name varchar NOT NULL,
-  target money,
+  target integer,
   created_at timestamp
 );
 
