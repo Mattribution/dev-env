@@ -1,11 +1,11 @@
 version: "3"
 services:
-  presto:
-    image: "starburstdata/presto:latest"
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./catalog/postgresdev.properties:/usr/lib/presto/etc/catalog/postgresdev.properties
+  # presto:
+  #   image: "starburstdata/presto:latest"
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - ./catalog/postgresdev.properties:/usr/lib/presto/etc/catalog/postgresdev.properties
   postgres:
     image: postgres
     volumes:

@@ -2,7 +2,7 @@ CREATE TABLE tracks (
   id SERIAL PRIMARY KEY,
   owner_id integer,
   anonymous_id varchar,
-  user_id character varying,
+  user_id varchar,
   fp_hash character varying,
   page_url character varying,
   page_path character varying,
@@ -32,8 +32,18 @@ CREATE TABLE kpis (
 CREATE TABLE billing_events (
   id SERIAL PRIMARY KEY,
   owner_id integer,
-  user_id integer,
+  user_id varchar,
   amount money,
+  created_at timestamp
+);
+
+CREATE TABLE campaigns (
+  id SERIAL PRIMARY KEY,
+  owner_id integer,
+  name varchar,
+  column_name varchar,
+  column_value varchar,
+  cost_per_month money,
   created_at timestamp
 );
 
