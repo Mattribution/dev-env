@@ -39,6 +39,8 @@ CREATE TABLE conversions (
 
 CREATE TABLE weights (
   id SERIAL PRIMARY KEY,
+  owner_id integer,
+  model_name varchar,
   key varchar,
   value NUMERIC(13, 4),
   created_at timestamp
