@@ -29,11 +29,26 @@ CREATE TABLE kpis (
   created_at timestamp
 );
 
+CREATE TABLE conversions (
+  id SERIAL PRIMARY KEY,
+  owner_id integer,
+  track_id integer,
+  kpi_id integer,
+  created_at timestamp
+);
+
+CREATE TABLE weights (
+  id SERIAL PRIMARY KEY,
+  key varchar,
+  value NUMERIC(13, 4),
+  created_at timestamp
+);
+
 CREATE TABLE billing_events (
   id SERIAL PRIMARY KEY,
   owner_id integer,
   user_id varchar,
-  amount money,
+  amount NUMERIC(13, 4),
   created_at timestamp
 );
 
@@ -43,7 +58,7 @@ CREATE TABLE campaigns (
   name varchar,
   column_name varchar,
   column_value varchar,
-  cost_per_month money,
+  cost_per_month NUMERIC(13, 4),
   created_at timestamp
 );
 

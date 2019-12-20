@@ -25,9 +25,11 @@ docker exec -it <container-id> /bin/sh
 Postgres is what we chose to use as a dev DB to connect to presto. We will use this for dev and internal use.
 
 ### Connect
+
 `psql -h 127.0.0.1 -U postgres`
 
 ### Create DB
+
 `CREATE DATABASE mattribution;`
 `\c mattribution`
 
