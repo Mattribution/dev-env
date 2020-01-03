@@ -26,6 +26,7 @@ CREATE TABLE kpis (
   value varchar NOT NULL,
   name varchar NOT NULL,
   target integer,
+  data json,
   created_at timestamp
 );
 
@@ -34,15 +35,6 @@ CREATE TABLE conversions (
   owner_id integer,
   track_id integer,
   kpi_id integer,
-  created_at timestamp
-);
-
-CREATE TABLE weights (
-  id SERIAL PRIMARY KEY,
-  owner_id integer,
-  model_name varchar,
-  key varchar,
-  value NUMERIC(13, 4),
   created_at timestamp
 );
 
