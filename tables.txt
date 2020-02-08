@@ -1,4 +1,4 @@
-CREATE TABLE tracks (
+CREATE TABLE public.tracks (
   id SERIAL PRIMARY KEY,
   owner_id integer,
   anonymous_id varchar,
@@ -15,18 +15,16 @@ CREATE TABLE tracks (
   campaign_name character varying,
   campaign_content character varying,
   received_at timestamp without time zone,
-  sent_at timestamp without time zone,
-  extra json
+  sent_at timestamp without time zone
 );
 
 CREATE TABLE kpis (
   id SERIAL PRIMARY KEY,
   owner_id integer,
-  column_name varchar NOT NULL,
-  value varchar NOT NULL,
+  pattern_match_column_name varchar NOT NULL,
+  pattern_match_row_value varchar NOT NULL,
   name varchar NOT NULL,
   target integer,
-  data json,
   created_at timestamp
 );
 
